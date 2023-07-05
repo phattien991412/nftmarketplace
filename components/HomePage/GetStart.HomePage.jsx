@@ -29,7 +29,7 @@ const GetStart = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-12">
         {data.map((item) => (
-          <div key={item.icon} className="bg-[#3B3B3B] rounded-[20px]">
+          <div key={item.icon} className="bg-secondary rounded-[20px]">
             <div className="p-8 pt-3">
               <div className="grid place-items-center">
                 <BlurredImage

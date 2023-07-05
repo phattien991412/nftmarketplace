@@ -9,21 +9,21 @@ const Collection = () => {
       cover: "/images/collectionp3.webp",
       images: ["/images/collections5.webp", "/images/collections1.webp"],
       card: "DSGN Animals",
-      avatar: "/images/avatar3.webp",
+      avatar: "/images/mrfox.webp",
       name: "MrFox"
     },
     {
       cover: "/images/collectionp1.webp",
       images: ["/images/collections2.webp", "/images/collections6.webp"],
       card: "Magic Mushrooms",
-      avatar: "/images/avatar1.webp",
+      avatar: "/images/shroomie.webp",
       name: "Shroomie"
     },
     {
       cover: "/images/collectionp2.webp",
       images: ["/images/collections3.webp", "/images/collections4.webp"],
       card: "Disco Machines",
-      avatar: "/images/avatar2.webp",
+      avatar: "/images/bekind.webp",
       name: "BeKind2Robots"
     }
   ];

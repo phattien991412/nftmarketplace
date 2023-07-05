@@ -84,7 +84,7 @@ const Creators = () => {
         {data.map((item, index) => (
           <div
             key={item.avatar}
-            className="relative bg-[#3B3B3B] p-5 rounded-[20px] hover:scale-90 transition-all duration-500 cursor-pointer"
+            className="relative bg-secondary p-5 rounded-[20px] hover:scale-90 transition-all duration-500 cursor-pointer"
           >
             <div className="grid place-items-center">
               <BlurredImage
@@ -98,12 +98,12 @@ const Creators = () => {
             <div className="text-center mt-5">
               <h5>{item.name}</h5>
               <p className="font-mono">
-                <span className="text-[#858584]">Total Sales:</span>
+                <span className="text-text">Total Sales:</span>
                 {item.total}
               </p>
             </div>
 
-            <p className="absolute top-4 left-4 grid place-items-center h-10 w-10 bg-[#2B2B2B] text-[#858584] rounded-full">
+            <p className="absolute top-4 left-4 grid place-items-center h-10 w-10 bg-primary text-text rounded-full">
               {index + 1}
             </p>
           </div>

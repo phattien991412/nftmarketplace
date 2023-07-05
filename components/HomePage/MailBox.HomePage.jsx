@@ -7,7 +7,7 @@ import BlurredImage from "../ReuseComponents/BlurredImage";
 
 const MailBox = () => {
   return (
-    <div className="mt-20 bg-[#3B3B3B] rounded-[20px]">
+    <div className="mt-20 bg-secondary rounded-[20px]">
       <div className="p-8 lg:p-14 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <BlurredImage

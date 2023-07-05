@@ -59,7 +59,7 @@ const Category = () => {
                             <BlurredImage src={item.icon} width={100} height={100} alt={"category"} />
                         </div>
                     </div>
-                    <div className="bg-[#3B3B3B] rounded-br-[20px] rounded-bl-[20px] ">
+                    <div className="bg-secondary rounded-br-[20px] rounded-bl-[20px] ">
                         <h5 className="px-7 py-6">{item.category}</h5>
                     </div>
                 </div>
