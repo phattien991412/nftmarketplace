@@ -10,7 +10,7 @@ const MarketplacePage = () => {
       <div className="w-[90%] xl:w-[70%] mx-auto mt-10">
         <Browse />
       </div>
-      <div className="">
+      <div>
         <div className="grid grid-cols-2 w-[90%] xl:w-[70%] mx-auto mt-10 text-center">
           {title.map((item) => (
             <div key={item} onClick={() => setSelect(item)} className={`${select === item && "border-b-4 border-text"} cursor-pointer pb-2`}>

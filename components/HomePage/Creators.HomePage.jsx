@@ -4,6 +4,7 @@ import { PiRocketLaunch } from "react-icons/pi";
 
 import Button from "../ReuseComponents/Button";
 import BlurredImage from "../ReuseComponents/BlurredImage";
+import Link from "next/link";
 
 const Creators = () => {
   const data = [
@@ -86,26 +87,28 @@ const Creators = () => {
             key={item.avatar}
             className="relative bg-secondary p-5 rounded-[20px] hover:scale-90 transition-all duration-500 cursor-pointer"
           >
-            <div className="grid place-items-center">
-              <BlurredImage
-                src={item.avatar}
-                width={300}
-                height={300}
-                alt={"avatar"}
-              />
-            </div>
+            <Link href={"/artis/animakid"} passHref>
+              <div className="grid place-items-center">
+                <BlurredImage
+                  src={item.avatar}
+                  width={300}
+                  height={300}
+                  alt={"avatar"}
+                />
+              </div>
 
-            <div className="text-center mt-5">
-              <h5>{item.name}</h5>
-              <p className="font-mono">
-                <span className="text-text">Total Sales:</span>
-                {item.total}
+              <div className="text-center mt-5">
+                <h5>{item.name}</h5>
+                <p className="font-mono">
+                  <span className="text-text">Total Sales:</span>
+                  {item.total}
+                </p>
+              </div>
+
+              <p className="absolute top-4 left-4 grid place-items-center h-10 w-10 bg-primary text-text rounded-full">
+                {index + 1}
               </p>
-            </div>
-
-            <p className="absolute top-4 left-4 grid place-items-center h-10 w-10 bg-primary text-text rounded-full">
-              {index + 1}
-            </p>
+            </Link>
           </div>
         ))}
       </div>
