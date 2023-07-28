@@ -50,18 +50,14 @@ const Header = () => {
         </div>
       </Link>
       <ul className="nav xl:flex gap-10 text-center items-center text-xl hidden">
-        {nav.map((item, index) => (
+        {nav.map((item) => (
           <li
-            // ref={(element) => {
-            //   if (element) {
-            //     liRef.current[index] = element;
-            //   }
-            // }}
             key={item.title}
             onClick={() => setSelect(item.link !== "/signup" ? item.link : "")}
             className={`${
-              item.link === select && "scale-100"
+              item.link === select ? "selected" : ""
             }`}
+            style={{}}
           >
             <Link href={item.link} passHref>
               {item.link !== "/signup" ? item.title : <Button text={item.title} icon={<AiOutlineUser/>} />}

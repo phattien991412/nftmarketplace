@@ -127,8 +127,15 @@ picture {
   }
 }
 
+.nav .selected {
+  &::before {
+    scale: 1;
+  }
+}
+
 .blur-img {
   position: relative;
+  border-radius: 20px;
   /* background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none; */
