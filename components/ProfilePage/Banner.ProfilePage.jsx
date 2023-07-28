@@ -44,7 +44,7 @@ const Banner = () => {
 
       <div className="w-[90%] xl:w-[70%] mx-auto mt-20">
         <div className="block lg:flex justify-between items-center mb-4">
-          <h2 className="text-[51px]">Animakid</h2>
+          <h2>Animakid</h2>
           <div className="block sm:flex gap-4 mt-4 lg:mt-0">
             <Button text={"0xc0E3...B79C"} icon={<PiCopy />} />
             <Button

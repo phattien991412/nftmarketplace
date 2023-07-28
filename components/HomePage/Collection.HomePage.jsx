@@ -38,7 +38,7 @@ const Collection = () => {
             <div>
               <BlurredImage
                 className={
-                  "hover:scale-90 cursor-pointer transition-all duration-500"
+                  "hover:scale-90 cursor-pointer"
                 }
                 src={item.cover}
                 width={300}
@@ -51,7 +51,7 @@ const Collection = () => {
                 <li key={image} className="h-[70px] w-[70px] lg:h-[100px] lg:w-[100px]">
                   <BlurredImage
                     className={
-                      "rounded-[20px] transition-all duration-500 hover:scale-90 cursor-pointer"
+                      "rounded-[20px] hover:scale-90 cursor-pointer"
                     }
                     src={image}
                     width={100}
@@ -60,7 +60,7 @@ const Collection = () => {
                   />
                 </li>
               ))}
-              <li className="grid place-items-center font-semibold h-[70px] w-[70px] lg:h-[100px] lg:w-[100px] bg-button rounded-[20px] cursor-pointer transition-all duration-500 hover:scale-90 ">
+              <li className="grid place-items-center font-semibold h-[70px] w-[70px] lg:h-[100px] lg:w-[100px] bg-button rounded-[20px] cursor-pointer hover:scale-90 ">
                 <p>1025+</p>
               </li>
             </ul>
@@ -69,8 +69,8 @@ const Collection = () => {
               <Link href={"/artis"} passHref >
                 <BlurredImage
                   src={item.avatar}
-                  width={50}
-                  height={50}
+                  width={500}
+                  height={500}
                   alt={"avatar"}
                 />
               </Link>

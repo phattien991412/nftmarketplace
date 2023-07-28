@@ -78,9 +78,6 @@ const ListNFT = ({ type }) => {
   ];
   return (
     <div className="mt-20">
-      <div className="">
-
-      </div>
       <ListCard data={type === "NFTs" ? data : []} className={"bg-primary"} alt={"nft"} />
     </div>
   );

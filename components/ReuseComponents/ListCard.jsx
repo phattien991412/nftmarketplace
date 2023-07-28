@@ -1,5 +1,6 @@
 import React from "react";
 import BlurredImage from "./BlurredImage";
+import Link from "next/link";
 
 const ListCard = ({ data, alt, className }) => {
   return (
@@ -9,6 +10,7 @@ const ListCard = ({ data, alt, className }) => {
           key={item.avatar}
           className="hover:scale-90 transition-all duration-500 cursor-pointer"
         >
+          <Link href={"/nft/orbitians"}  passHref>
           <div className="rounded-tr-[20px] rounded-tl-[20px] overflow-hidden">
             <BlurredImage src={item.cover} width={400} height={400} alt={alt} />
           </div>
@@ -16,14 +18,12 @@ const ListCard = ({ data, alt, className }) => {
             <div className="p-8">
               <h5>{item.title}</h5>
               <div className="flex items-center gap-4 my-4">
-                <div>
                   <BlurredImage
                     src={item.avatar}
                     width={100}
                     height={100}
                     alt={"avatar"}
                   />
-                </div>
                 <p>{item.name}</p>
               </div>
 
@@ -40,6 +40,7 @@ const ListCard = ({ data, alt, className }) => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
       )) :
         <div className="w-full text-3xl text-text font-semibold">Nothing to show here</div>

@@ -20,14 +20,14 @@ const Header = () => {
       title: "Marketplace",
       link: "/marketplace"
     },
-    {
-      title: "Rankings",
-      link: "/rankings"
-    },
-    {
-      title: "Connect a wallet",
-      link: "/wallet"
-    },
+    // {
+    //   title: "Rankings",
+    //   link: "/rankings"
+    // },
+    // {
+    //   title: "Connect a wallet",
+    //   link: "/wallet"
+    // },
     {
       title: "Sign Up",
       link: "/signup"
@@ -60,7 +60,7 @@ const Header = () => {
             key={item.title}
             onClick={() => setSelect(item.link !== "/signup" ? item.link : "")}
             className={`${
-              item.link === select && "border-b-2 border-button"
+              item.link === select && "scale-100"
             }`}
           >
             <Link href={item.link} passHref>

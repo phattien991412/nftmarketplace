@@ -52,7 +52,7 @@ h1 {
 }
 
 h2 {
-  /* font-size: 51px; */
+  font-size: 51px;
   font-weight: 600;
   line-height: 110%;
   text-transform: capitalize;
@@ -125,4 +125,50 @@ picture {
   &::before {
     content: none;
   }
+}
+
+.blur-img {
+  position: relative;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none; */
+}
+
+.blur-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: #fff;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blur-img.loaded::before {
+  animation: none;
+  content: none;
+}
+
+.blur-img img {
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  pointer-events: auto;
+}
+
+.blur-img.loaded img {
+  opacity: 1;
 }
