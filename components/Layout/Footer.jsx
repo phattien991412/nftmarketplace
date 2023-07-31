@@ -10,7 +10,7 @@ import BlurredImage from "../ReuseComponents/BlurredImage";
 
 const Footer = () => {
   return (
-    <div className="bg-secondary">
+    <div className="bg-secondary mt-16">
       <div className="mt-20 w-[90%] xl:w-[70%] mx-auto pt-20 ">
         <div className="grid grid-cols-5 gap-x-4 items-start lg:px-16 border-b-2 border-text pb-10">
           <div className="col-span-5 lg:col-span-2">

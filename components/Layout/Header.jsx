@@ -59,7 +59,7 @@ const Header = () => {
             }`}
             style={{}}
           >
-            <Link href={item.link} passHref>
+            <Link href={item.link} passHref prefetch>
               {item.link !== "/signup" ? item.title : <Button text={item.title} icon={<AiOutlineUser/>} />}
             </Link>
           </li>
