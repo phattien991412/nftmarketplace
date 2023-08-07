@@ -20,6 +20,12 @@ module.exports = {
         primary: "#2B2B2B",
         secondary: "#3B3B3B",
         text: "#858584"
+      },
+      fontSize: {
+        clamp: "clamp(2.25rem, 5vw, 4rem)",
+      },
+      gridTemplateColumns: {
+        'auto': 'repeat(auto-fit, minmax(300px, 1fr))',
       }
     },
   },

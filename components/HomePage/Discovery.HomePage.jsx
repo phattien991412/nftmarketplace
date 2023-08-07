@@ -3,7 +3,6 @@ import React from "react";
 import { AiOutlineEye } from "react-icons/ai";
 
 import Button from "../ReuseComponents/Button";
-import BlurredImage from "../ReuseComponents/BlurredImage";
 import ListCard from "../ReuseComponents/ListCard";
 
 const Discovery = () => {

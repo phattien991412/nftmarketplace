@@ -23,8 +23,8 @@ const Banner = () => {
   ];
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-      <div>
-        <h1 className="text-[36px] lg:text-[67px]">
+      <div className="fadeLeft">
+        <h1 className="text-clamp">
           Discover digital art & Collect NFTs
         </h1>
         <p className="py-8">
@@ -35,7 +35,7 @@ const Banner = () => {
 
         <Count data={count} />
       </div>
-      <div>
+      <div className="fadeRight">
         <BlurredImage
           src={"/images/hero.gif"}
           width={300}

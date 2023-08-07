@@ -80,7 +80,7 @@ const Footer = () => {
                     type="text"
                     placeholder="Enter your email here"
                   />
-                  <div className="absolute right-0">
+                  <div className="absolute -right-4">
                     <Button text={"Subscribe"} icon={<AiOutlineMail />} />
                   </div>
                 </div>

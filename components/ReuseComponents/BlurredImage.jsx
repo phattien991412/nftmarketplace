@@ -25,7 +25,7 @@ const BlurredImage = ({src, alt, width, height, className}) => {
 
   return (
     <div className="blur-img" ref={blurredImageDivRef}>
-      <Image className={className} width={width} height={height} src={src} alt={alt} ref={imgRef} />
+      <Image priority className={className} width={width} height={height} src={src} alt={alt} ref={imgRef} />
     </div>
   );
 };

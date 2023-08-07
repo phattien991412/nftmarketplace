@@ -2,6 +2,7 @@ import React from "react";
 import BlurredImage from "../ReuseComponents/BlurredImage";
 import Input from "../ReuseComponents/Input";
 import Button from "../ReuseComponents/Button";
+import AOS from "../ReuseComponents/AOS";
 
 const SignupPage = () => {
   return (
@@ -26,11 +27,21 @@ const SignupPage = () => {
         </div>
 
         <form className="lg:w-1/2" action="">
-          <Input id="name" type="text" label="Username" />
-          <Input id="email" type="email" label="Email Address" />
-          <Input id="password" type="password" label="Password" />
-          <Input id="password" type="password" label="Confirm Password" />
-          <Button text={"Create Account"} className={"w-full"} />
+          <AOS className="fadeRight" index="1">
+            <Input id="name" type="text" label="Username" />
+          </AOS>
+          <AOS className="fadeRight" index="2">
+            <Input id="email" type="email" label="Email Address" />
+          </AOS>
+          <AOS className="fadeRight" index="3">
+            <Input id="password" type="password" label="Password" />
+          </AOS>
+          <AOS className="fadeRight" index="4">
+            <Input id="password" type="password" label="Confirm Password" />
+          </AOS>
+          <AOS className="fadeRight" index="5">
+            <Button text={"Create Account"} className={"w-full"} />
+          </AOS>
         </form>
       </div>
     </div>

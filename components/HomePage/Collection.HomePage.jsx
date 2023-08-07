@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import BlurredImage from "../ReuseComponents/BlurredImage";
+import AOS from "../ReuseComponents/AOS";
 
 const Collection = () => {
   const data = [
@@ -33,8 +34,8 @@ const Collection = () => {
       <p>Checkout our weekly updated trending collection.</p>
 
       <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-        {data.map((item) => (
-          <div key={item.card}>
+        {data.map((item, index) => (
+          <AOS key={item.card} index={index} className="fadeUp">
             <div>
               <BlurredImage
                 className={
@@ -76,7 +77,7 @@ const Collection = () => {
               </Link>
               <p className="text-base">{item.name}</p>
             </div>
-          </div>
+          </AOS>
         ))}
       </div>
     </div>

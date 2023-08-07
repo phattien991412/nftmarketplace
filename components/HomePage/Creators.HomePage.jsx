@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 import { PiRocketLaunch } from "react-icons/pi";
 
 import Button from "../ReuseComponents/Button";
 import BlurredImage from "../ReuseComponents/BlurredImage";
-import Link from "next/link";
+import AOS from "../ReuseComponents/AOS";
 
 const Creators = () => {
   const data = [
@@ -81,36 +82,39 @@ const Creators = () => {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 items-center">
-        {data.map((item, index) => (
-          <div
-            key={item.avatar}
-            className="relative bg-secondary p-5 rounded-[20px] hover:scale-90 transition-all duration-500 cursor-pointer"
-          >
-            <Link href={"/artis/animakid"} passHref>
-              <div className="grid place-items-center">
-                <BlurredImage
-                  src={item.avatar}
-                  width={300}
-                  height={300}
-                  alt={"avatar"}
-                />
-              </div>
+      <div className="grid grid-cols-auto gap-8 items-center">
+        {data.map((item, index) =>
+          <AOS key={item.avatar} index={index} className="fadeUp" >
+            <div
+              className="relative bg-secondary p-5 rounded-[20px] hover:scale-90 transition-all duration-500 cursor-pointer"
+            >
+              <Link href={"/artis/animakid"} passHref>
+                <div className="grid place-items-center">
+                  <BlurredImage
+                    src={item.avatar}
+                    width={300}
+                    height={300}
+                    alt={"avatar"}
+                  />
+                </div>
 
-              <div className="text-center mt-5">
-                <h5>{item.name}</h5>
-                <p className="font-mono">
-                  <span className="text-text">Total Sales:</span>
-                  {item.total}
+                <div className="text-center mt-5">
+                  <h5>
+                    {item.name}
+                  </h5>
+                  <p className="font-mono">
+                    <span className="text-text">Total Sales:</span>
+                    {item.total}
+                  </p>
+                </div>
+
+                <p className="absolute top-4 left-4 grid place-items-center h-10 w-10 bg-primary text-text rounded-full">
+                  {index + 1}
                 </p>
-              </div>
-
-              <p className="absolute top-4 left-4 grid place-items-center h-10 w-10 bg-primary text-text rounded-full">
-                {index + 1}
-              </p>
-            </Link>
-          </div>
-        ))}
+              </Link>
+            </div>
+          </AOS>
+        )}
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ const MailBox = () => {
               type="text"
               placeholder="Enter your email here"
             />
-            <div className="lg:absolute right-0">
+            <div className="lg:absolute -right-4">
               <Button text={"Subscribe"} icon={<AiOutlineMail />} />
             </div>
           </div>

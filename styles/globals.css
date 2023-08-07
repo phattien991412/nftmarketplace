@@ -44,6 +44,10 @@ p {
   padding: 0;
 }
 
+:where(input) {
+  caret-color: #a259ff;
+}
+
 h1 {
   /* font-size: 50px; */
   font-weight: 600;
@@ -178,4 +182,79 @@ picture {
 
 .blur-img.loaded img {
   opacity: 1;
+}
+
+.fadeLeft {
+  transform: translateX(-100%);
+  animation: slideLeft 1.25s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate {
+  opacity: 0;
+}
+
+.fadeRight {
+  transform: translateX(100%);
+  animation: slideRight 1.25s ease-out forwards;
+  opacity: 1;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation collection home page*/
+.fadeUp {
+  transform: translateY(100%);
+  animation: slideUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeRight[data-index="1"] {
+  animation-delay: 0s;
+}
+
+.fadeRight[data-index="2"] {
+  animation-delay: 0.25s;
+}
+
+.fadeRight[data-index="3"] {
+  animation-delay: 0.5s;
+}
+
+.fadeRight[data-index="4"] {
+  animation-delay: 0.75s;
+}
+
+.fadeRight[data-index="5"] {
+  animation-delay: 1s;
 }
