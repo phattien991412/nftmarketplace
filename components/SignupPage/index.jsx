@@ -26,7 +26,7 @@ const SignupPage = () => {
           </p>
         </div>
 
-        <form className="lg:w-1/2" action="">
+        <form className="lg:w-1/2" onSubmit={(e) => e.preventDefault()}>
           <AOS className="fadeRight" index="1">
             <Input id="name" type="text" label="Username" />
           </AOS>

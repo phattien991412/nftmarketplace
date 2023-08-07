@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function AOS({ children, className, index }) {
+export default function AOS({ children, className, index, duration, }) {
   const contentRef = useRef();
 
   useEffect(
@@ -34,7 +34,7 @@ export default function AOS({ children, className, index }) {
   );
 
   return (
-    <div data-index={index} ref={contentRef} className="animate">
+    <div data-index={index} ref={contentRef} style={{ "--animate-duration": `${duration ? duration : 1250}ms` }} className="animate">
       {children}
     </div>
   );

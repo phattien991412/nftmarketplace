@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --delay: 250ms;
+  --animate-duration: 1250ms; 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -186,7 +191,7 @@ picture {
 
 .fadeLeft {
   transform: translateX(-100%);
-  animation: slideLeft 1.25s ease-out forwards;
+  animation: slideLeft var(--animate-duration) ease-out forwards;
 }
 
 @keyframes slideLeft {
@@ -206,8 +211,9 @@ picture {
 
 .fadeRight {
   transform: translateX(100%);
-  animation: slideRight 1.25s ease-out forwards;
+  animation: slideRight var(--animate-duration) ease-out forwards;
 }
+
 
 @keyframes slideRight {
   from {
@@ -223,7 +229,7 @@ picture {
 /* Animation collection home page*/
 .fadeUp {
   transform: translateY(100%);
-  animation: slideUp 1s ease-out forwards;
+  animation: slideUp var(--animate-duration) ease-out forwards;
 }
 
 @keyframes slideUp {
@@ -238,21 +244,21 @@ picture {
 }
 
 .fadeRight[data-index="1"] {
-  animation-delay: 0s;
+  animation-duration: var(--delay);
 }
 
 .fadeRight[data-index="2"] {
-  animation-delay: 0.25s;
+  animation-duration: calc(2 * var(--delay));
 }
 
 .fadeRight[data-index="3"] {
-  animation-delay: 0.5s;
+  animation-duration: calc(3 * var(--delay));  
 }
 
 .fadeRight[data-index="4"] {
-  animation-delay: 0.75s;
+  animation-duration: calc(4 * var(--delay));
 }
 
 .fadeRight[data-index="5"] {
-  animation-delay: 1s;
+  animation-duration: calc(5 * var(--delay));
 }

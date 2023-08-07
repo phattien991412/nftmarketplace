@@ -34,13 +34,11 @@ const Collection = () => {
       <p>Checkout our weekly updated trending collection.</p>
 
       <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-        {data.map((item, index) => (
+        {data.map((item, index) =>
           <AOS key={item.card} index={index} className="fadeUp">
             <div>
               <BlurredImage
-                className={
-                  "hover:scale-90 cursor-pointer"
-                }
+                className={"hover:scale-90 cursor-pointer"}
                 src={item.cover}
                 width={300}
                 height={400}
@@ -48,26 +46,29 @@ const Collection = () => {
               />
             </div>
             <ul className="h-[100px] flex items-center my-8 gap-4">
-              {item.images.map((image) => (
-                <li key={image} className="h-[70px] w-[70px] lg:h-[100px] lg:w-[100px]">
+              {item.images.map(image =>
+                <li
+                  key={image}
+                  className="h-[70px] w-[70px] lg:h-[100px] lg:w-[100px]"
+                >
                   <BlurredImage
-                    className={
-                      "rounded-[20px] hover:scale-90 cursor-pointer"
-                    }
+                    className={"rounded-[20px] hover:scale-90 cursor-pointer"}
                     src={image}
                     width={100}
                     height={100}
                     alt={"collection"}
                   />
                 </li>
-              ))}
+              )}
               <li className="grid place-items-center font-semibold h-[70px] w-[70px] lg:h-[100px] lg:w-[100px] bg-button rounded-[20px] cursor-pointer hover:scale-90 ">
                 <p>1025+</p>
               </li>
             </ul>
-            <h5 className="text-[22px] font-semibold">{item.card}</h5>
+            <h5 className="text-[22px] font-semibold">
+              {item.card}
+            </h5>
             <div className="flex items-center gap-4 py-4">
-              <Link href={"/artis"} passHref >
+              <Link href={"/artis"} passHref>
                 <BlurredImage
                   src={item.avatar}
                   width={500}
@@ -75,10 +76,12 @@ const Collection = () => {
                   alt={"avatar"}
                 />
               </Link>
-              <p className="text-base">{item.name}</p>
+              <p className="text-base">
+                {item.name}
+              </p>
             </div>
           </AOS>
-        ))}
+        )}
       </div>
     </div>
   );
