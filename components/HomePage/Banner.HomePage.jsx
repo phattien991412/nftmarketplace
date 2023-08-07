@@ -38,8 +38,8 @@ const Banner = () => {
       <div className="fadeRight">
         <BlurredImage
           src={"/images/hero.gif"}
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           alt={"hero"}
         />
       </div>
